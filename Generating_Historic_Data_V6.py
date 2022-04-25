@@ -92,7 +92,7 @@ while j <= FILE_NUMBER:
             new_price = new_price + added_price
             formatted_new_price = float('%.2f' % new_price)
             f = open('.\Historic_Data_txt\\' + TXT_FILE_WRITE, 'a')
-            f.write(f'{str(i)} {str(formatted_new_price)} \n')
+            f.write(f'{str(i)}:\t{str(formatted_new_price)} \n')
             f.close()
             i += 1
         elif up_or_down_decision == 'down':
@@ -102,7 +102,7 @@ while j <= FILE_NUMBER:
             new_price = new_price - subtracted_price
             formatted_new_price = float('%.2f' % new_price)
             f = open('.\Historic_Data_txt\\' + TXT_FILE_WRITE, 'a')
-            f.write(f'{str(i)} {str(formatted_new_price)} \n')
+            f.write(f'{str(i)}:\t{str(formatted_new_price)} \n')
             f.close()
             i += 1
     read_file = pd.read_csv (r'.\Historic_Data_txt\\' + NAME_WITHOUT_EXTENSION + '.txt')
