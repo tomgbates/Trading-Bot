@@ -84,11 +84,9 @@ while j <= FILE_NUMBER:
     new_price = float('%.2f' % starting_price)
     while i <= iteration_total:
         up_or_down = ['up','down']
-        # up_or_down_decision = random.choices(up_or_down, weights=(50,50), k=1)
         up_or_down_decision = random.choice(up_or_down)
         if up_or_down_decision == 'up':
             change = [0.001, 0.002, 0.00005, 0.01, 0.003]
-            # change_decision = random.choices(change, weights=(35, 15, 10, 25, 15), k=1)
             change_decision = random.choice(change)
             added_price = new_price * change_decision
             new_price = new_price + added_price
@@ -99,7 +97,6 @@ while j <= FILE_NUMBER:
             i += 1
         elif up_or_down_decision == 'down':
             change = [0.001, 0.002, 0.00005, 0.01, 0.003]
-            # change_decision = random.choices(change, weights=(35, 15, 10, 25, 15), k=1)
             change_decision = random.choice(change)
             subtracted_price = new_price * change_decision
             new_price = new_price - subtracted_price
