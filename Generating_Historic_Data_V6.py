@@ -83,7 +83,7 @@ while j <= FILE_NUMBER:
     j += 1
     new_price = float('%.2f' % starting_price)
     while i <= iteration_total:
-        up_or_down = ['up','down']
+        up_or_down = ['up', 'down']
         up_or_down_decision = random.choice(up_or_down)
         if up_or_down_decision == 'up':
             change = [0.001, 0.002, 0.00005, 0.01, 0.003]
